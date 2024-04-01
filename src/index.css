@@ -12,6 +12,28 @@
   scroll-behavior: smooth;
 }
 
+.underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #FF6452;
+}
+
+.underline-animation::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.9px;
+  background-color: #6D6D6D;
+  bottom: 0;
+  right: 100%;
+  transition: width 0.5s ease-out, right 0.5s ease-out;
+}
+
+.underline-animation:hover::before {
+  width: 100%;
+  right: 0;
+}
+
 @layer components {
   .max-container {
     max-width: 1440px;
@@ -37,11 +59,11 @@
   }
 
   .padding-l {
-    @apply sm:pl-16 pl-8;
+    @apply sm:pl-44 pl-8;
   }
 
   .padding-r {
-    @apply sm:pr-16 pr-8;
+    @apply sm:pr-40 pr-8;
   }
 
   .padding-t {

@@ -4,7 +4,7 @@ import { navLinks } from "../constants";
 
 const Nav = () => {
   return (
-    <header className="padding-x py-8 z-10 absolute w-full">
+    <header className="padding-x xl:padding-l wide:padding-r py-8 z-10 absolute w-full">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="Logo" width={130} height={29} />
@@ -20,15 +20,13 @@ const Nav = () => {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#sign-in"
-              className="fonts-montserrat leading-normal text-lg font-bold"
-            >
-              Sign In
-            </a>
-          </li>
         </ul>
+        <a
+              href="#sign-in"
+              className="fonts-montserrat leading-normal text-lg font-bold justify-end max-lg:hidden"
+            >
+              Sign In / Explore Now
+        </a>
         <div className="hidden max-lg:block">
           <button> {/* Functionality missing, I'd like a sidebar... */}
             <img src={hamburger} alt="Hamburger Icon" width={25} height={25} />
